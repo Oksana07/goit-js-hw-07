@@ -1,27 +1,42 @@
-// Счетчик состоит из спана и кнопок, которые должны увеличивать и уменьшать значение счетчика на 1.
+// Счетчик состоит из спана и кнопок, 
+// которые должны увеличивать и уменьшать значение счетчика на 1.
 
-// Создай переменную counterValue в которой будет хранится текущее значение счетчика.
-// Создай функции increment и decrement для увеличения и уменьшения значения счетчика
-// Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
+//1) Создай переменную counterValue в которой будет хранится текущее 
+// значение счетчика.
+
+//2)  Создай функции increment и decrement 
+// для увеличения и уменьшения значения счетчика
+
+//3)  Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
 // {/* <div id="counter">
 //   <button type="button" data-action="decrement">-1</button>
 //   <span id="value">0</span>
 //   <button type="button" data-action="increment">+1</button>
 // </div> */}
 
-// const title = document.querySelector('title');
-// title.innerHTML = 'hello'
-// console.log(title.textContent);
+const type_button = {
+  sub: document.querySelector("[data-action='increment']"),
+  add: document.querySelector("[data-action='decrement']"),
+  span: document.querySelector('#value'),
+  id: document.querySelector('#counter '),
+};
+let counterValue = 0;
+const increment = () => {
+  counterValue += 1;
 
-// const p = document.querySelector('p');
-// p.innerHTML = 'hello'
-// console.log(p.textContent);
+  document.getElementById('value').textContent = counterValue;
+};
 
-// const button = document.querySelector('button');
-// console.log(button.textContent);
+const decrement = () => {
+  counterValue -= 1;
 
-// const span = document.querySelector('span');
-// console.log(span.textContent);
+  document.getElementById('value').textContent = counterValue;
+};
+type_button.sub.addEventListener('click', increment);
+type_button.add.addEventListener('click', decrement);
+
+
+
 
 
 

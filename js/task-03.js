@@ -23,21 +23,9 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-//  const galleryEl = document.querySelector('#gallery');
-// const imagesEl = [];
-// for (let i = 0; i < images.length; i += 1) {
-//   const option = images[i];
-// const galleryListEl = document.createElement('li');
-//   const galleryImagesEl = document.createElement('img');
-//   galleryImagesEl.src = option.url;
-//   galleryImagesEl.alt =  option.alt;
-//   galleryImagesEl.width = 320;
-//   imagesEl.push(galleryImagesEl)
-//   galleryEl.appendChild(galleryImagesEl);
-//   galleryEl.appendChild(galleryListEl);
-// };
+
 for (let el of images)
-  document.querySelector('#gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${el.url}" width = 320 alt="${el.alt}" ></li>`);
+document.querySelector('#gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${el.url}" width = 320 alt="${el.alt}" ></li>`);
 
 
 
