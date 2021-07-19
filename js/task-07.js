@@ -8,7 +8,12 @@
 // <br />
 // <span id="text">Абракадабра!</span>
 
-const input = document.querySelectorAll('.input');
+// const imputRangerEl = document.querySelector('#font-size-color')
+// const textEl = document.querySelector('#text')
 
-console.log(input);
+// const changeFontSizeText = inputRangeEl.addEventListener("input", onChangeSizeText)
 
+// function onChangeSizeText(event) {
+//     const fontSize = Number(event.currentTarget.value)
+//     textEl.setAttribute("style", `font-size: ${fontSize}`)
+// }

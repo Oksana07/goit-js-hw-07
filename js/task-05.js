@@ -7,7 +7,10 @@
 // { <input type="text" placeholder="Ваше имя?" id="name-input" />
 // <h1>Привет, <span id="name-output">незнакомец</span>!</h1> }
 
-function input() {
-  const input_taker = document.getElementById('name-input').value;
-  document.getElementById('name-output').innerHTML = input_taker;
+const refs = {
+    userName: document.querySelector(`#name-output`),
+    input: document.querySelector(`#name-input`)
 }
+refs.input.addEventListener(`input`, (event) => {
+    event.currentTarget.value.trim() === '' ? refs.userName.textContent = 'незнакомец' : refs.userName.textContent = event.currentTarget.value
+})
