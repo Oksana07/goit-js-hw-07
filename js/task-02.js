@@ -18,12 +18,18 @@ const ingredients = [
 // document.createElement().
 
 
-const ulList = document.getElementById("ingredients");
-  const foodIngredients = ingredients.forEach(ingredient => {
-  let items = document.createElement("li");
-  items.innerHTML = ingredient;
-  ulList.append(items);
+const listIngredient = document.querySelector("#ingredients");
+
+const ingredientsEl = ingredients.map((ingredient) => {
+  let createTegLi = document.createElement("li");
+  createTegLi.append(ingredient);
+  return createTegLi;
 });
+
+
+listIngredient.append(...ingredientsEl);
+
+console.log(listIngredient);
 
 
 

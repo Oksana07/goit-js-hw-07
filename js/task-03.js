@@ -24,10 +24,14 @@ const images = [
   },
 ];
 
-for (let el of images)
-document.querySelector('#gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${el.url}" width = 320 alt="${el.alt}" ></li>`);
 
+const ul = document.querySelector('#gallery');
 
+const createElement = ({url,alt})=>`<li><img src ="${url} alt= "${alt}" width='350'></li>`
+
+const markUp = images.map(createElement).join('');
+
+ul.insertAdjacentHTML('beforeend', markUp)
 
 
 
